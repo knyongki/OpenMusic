@@ -6,7 +6,7 @@ class SongsHandler {
     this._validator = validator;
 
     this.postSongHandler = this.postSongHandler.bind(this);
-    this.getSongHandler = this.getSongsHandler.bind(this);
+    this.getSongsHandler = this.getSongsHandler.bind(this);
     this.getSongByIdHandler = this.getSongByIdHandler.bind(this);
     this.putSongByIdHandler = this.putSongByIdHandler.bind(this);
     this.deleteSongByIdHandler = this.deleteSongByIdHandler.bind(this);
@@ -69,7 +69,7 @@ class SongsHandler {
 
     const response = h.response({
       status: 'success',
-      message: 'Data lagu berhasil diambil',
+      message: 'Lagu berhasil diambil',
       data: {
         songs,
       },
@@ -84,7 +84,7 @@ class SongsHandler {
       const song = await this._service.getSongById(id);
       return {
         status: 'success',
-        message: 'Data lagu berdasarkan id berhasil',
+        message: 'Lagu berdasarkan id berhasil diambil',
         data: {
           song,
         },

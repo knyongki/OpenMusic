@@ -54,6 +54,7 @@ class AlbumsHandler {
       const album = await this._service.getAlbumById(id);
       return {
         status: 'success',
+        message: 'Album berhasil diambil',
         data: {
           album,
         },
