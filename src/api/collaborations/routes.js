@@ -1,18 +1,18 @@
 const routes = (handler) => [
   {
-    method: "POST",
-    path: "/collaborations",
+    method: 'POST',
+    path: '/collaborations',
     handler: handler.postCollaborationHandler,
     options: {
-      auth: "musicsapp_jwt",
+      auth: 'musicsapp_jwt',
     },
   },
   {
-    method: "DELETE",
-    path: "/collaborations",
+    method: 'DELETE',
+    path: '/collaborations',
     handler: handler.deleteCollaborationHandler,
     options: {
-      auth: "musicsapp_jwt",
+      auth: 'musicsapp_jwt',
     },
   },
 ];

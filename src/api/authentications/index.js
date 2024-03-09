@@ -1,19 +1,20 @@
-/* eslint-disable object-curly-newline */
-const AuthenticationHandler = require("./handler");
-const routes = require("./routes");
+const AuthenticationHandler = require('./handler');
+const routes = require('./routes');
 
 module.exports = {
-  name: "authentications",
-  version: "1.0.0",
+  name: 'authentications',
+  version: '1.0.0',
   register: async (
     server,
-    { authenticationsService, userService, tokenManager, validator }
+    {
+      authenticationsService, userService, tokenManager, validator,
+    },
   ) => {
     const authenticationHandler = new AuthenticationHandler(
       authenticationsService,
       userService,
       tokenManager,
-      validator
+      validator,
     );
 
     server.route(routes(authenticationHandler));
